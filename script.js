@@ -1,21 +1,3 @@
-//let url = "https://pokeapi.co/api/v2/"
-//let query = "/pokemon"
-//let name = "/charizard"
-
-//let ENDPOINT = url+ query + name 
-
-//console.log (ENDPOINT)
-
-//let promise = fetch (ENDPOINT)
-
-//console.log (promise)
-
-//promise.then ((res)=> {
-    //console.log(res)
-    //return res.json()
-//})
-//.then ((data) => console.log (data))
-
 async function searchPokemon() {
     try {
         const pokemonName = document.getElementById("pokemon-name").value.trim().toLowerCase(); // Ensure proper formatting
@@ -28,9 +10,16 @@ async function searchPokemon() {
         const data = await response.json();
         const pokemonSprite = data.sprites.front_default;
         const imgElement = document.getElementById("PokemonSprite");
+        const pokemonAbilities = document.getElementById("pokemonAbilities")
+        console.log(data)
         
         imgElement.src = pokemonSprite;
         imgElement.style.display = "block"
+        pokemonAbilities.src = "abilities"
+        pokemonAbilities.display = "block"
+
+        const abilities = data.abilities.map((ability) => ability.ability.name).join(', ');
+        pokemonAbilities.value = `Abilities: ${abilities}`;
 
     } catch (error) {
         console.error(error.message); 
