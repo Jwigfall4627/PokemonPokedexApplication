@@ -1,6 +1,6 @@
 async function searchPokemon() {
     try {
-        const pokemonName = document.getElementById("pokemon-name").value.trim().toLowerCase(); // Ensure proper formatting
+        const pokemonName = document.getElementById("pokemon-name").value.trim().toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         
         if (!response.ok) {
