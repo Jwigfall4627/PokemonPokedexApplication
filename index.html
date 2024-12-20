@@ -6,14 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="center">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <h1>Hello <img id="pokeballImage" src="Pokeball Sprite.png"> Welcome to my pokemon api project</h1>
+    <h1>Hello <img id="pokeballImage" src="https://i.gifer.com/origin/28/2860d2d8c3a1e402e0fc8913cd92cd7a_w200.gif"> Welcome to my pokemon api project</h1>
     <input type="text" id="pokemon-name" placeholder="Enter Pokemon name"> 
-    <button onclick="searchPokemon()">Search Pokemon</button> <br>
+    <button onclick="searchPokemon()" id="buttonsearch" > Search Pokemon</button> <br>
     <img src="pokemonSprite" alt="Pokemon Sprite" id="PokemonSprite"> 
     <br>
+    <button id="ViewMore" onclick="viewMore()">View More</button>
     <textarea placeholder="This is the pokemons abilities." src="abilities" id="pokemonAbilities" rows="5" cols="30" readonly></textarea>
+    </div> 
 </body>
 </html>
 

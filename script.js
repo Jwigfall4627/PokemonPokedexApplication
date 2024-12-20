@@ -28,3 +28,12 @@ async function searchPokemon() {
 }
 
 document.getElementById('pokemon-button').addEventListener('click', searchPokemon);
+
+function viewMore() {
+    const pokemonName = document.getElementById("pokemon-name").value.trim().toLowerCase();
+    if (pokemonName) {
+        window.location.href = `details.html?name=${pokemonName}`;
+    } else {
+        alert("Please search for a Pokémon first!");
+    }
+}

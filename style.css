@@ -1,5 +1,20 @@
 #pokeballImage {
-    max-width: 3%;
-    max-height: 5%;
+    max-width: 50px;
+    max-height: 50px;
  }
- 
+
+ .center{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    height: 650px;
+ }
+
+ #buttonsearch{
+    margin-top: 15px;
+ }
+
+ #ViewMore{
+    margin-bottom: 15px;
+ }
+
