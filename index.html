@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="center">
+    <title>Pokémon API Project</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <h1>Hello <img id="pokeballImage" src="https://i.gifer.com/origin/28/2860d2d8c3a1e402e0fc8913cd92cd7a_w200.gif"> Welcome to my pokemon api project</h1>
-    <input type="text" id="pokemon-name" placeholder="Enter Pokemon name"> 
-    <button onclick="searchPokemon()" id="buttonsearch" > Search Pokemon</button> <br>
-    <img src="pokemonSprite" alt="Pokemon Sprite" id="PokemonSprite"> 
-    <br>
-    <button id="ViewMore" onclick="viewMore()">View More</button>
-    <textarea placeholder="This is the pokemons abilities." src="abilities" id="pokemonAbilities" rows="5" cols="30" readonly></textarea>
-    </div> 
+    <script src="script.js" defer></script>
+</head>
+<body style="background-color:#CC0000" >
+    <div class="center">
+        <h1>Hello <img id="pokeballImage" src="https://i.gifer.com/origin/28/2860d2d8c3a1e402e0fc8913cd92cd7a_w200.gif" alt="Pokéball"> Welcome to my Pokémon API Project</h1>
+        <input type="text" id="pokemon-name" placeholder="Enter Pokémon name">
+        <button onclick="searchPokemon()" id="buttonsearch">Search Pokémon</button>
+        <br>
+        <img src="" alt="Pokemon Sprite" id="PokemonSprite" style="display:none;">
+        <br>
+        <button style="margin-bottom: 10px;" id="toggleShiny" style="display:none;" onclick="toggleShiny()">View Shiny</button>
+        <textarea id="pokemonAbilities" rows="5" cols="30" placeholder="This is the Pokémon's abilities." readonly></textarea>
+        <br>
+        <div id="pokemon-grid02" class="pokemon-grid"></div>
+    </div>
 </body>
 </html>
-
